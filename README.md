@@ -1,16 +1,33 @@
-# React + Vite
+# TaskFlow (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![CI](https://github.com/rahul-chauhan-dev/taskflow-frontend/actions/workflows/ci.yml/badge.svg)
 
-Currently, two official plugins are available:
+React single-page app for TaskFlow, a project and task manager.
+Backend repository: https://github.com/rahul-chauhan-dev/taskflow-backend
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Login](docs/screenshots/login.png)
+![Dashboard](docs/screenshots/dashboard.png)
+![Board](docs/screenshots/board.png)
 
-## React Compiler
+## Features
+- Register and log in, with protected routes
+- Projects and tasks with search, filters, sorting and pagination
+- Kanban board with drag and drop
+- Task comments and a statistics dashboard
+- Form validation with server-side error messages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
+React, React Router, Vite, plain CSS
 
-## Expanding the ESLint configuration
+## Run locally
+```bash
+npm install
+cp .env.example .env    # set VITE_API_URL if the backend is not on localhost:8080
+npm run dev
+```
+Open http://localhost:5173. The backend must be running.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Build
+```bash
+npm run build
+```

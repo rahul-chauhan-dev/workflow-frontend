@@ -31,7 +31,7 @@ const INITIAL_FILTERS = {
 };
 
 function ProjectDetailPage() {
-  usePageTitle("Project?.name");
+  usePageTitle("Project ? . name"); // Placeholder title until we load the project
   const { id } = useParams();
   const projectId = Number(id);
   const { applyTaskChange } = useProjects();
